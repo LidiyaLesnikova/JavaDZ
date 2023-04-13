@@ -10,6 +10,11 @@ public class task1 {
         scanner.close();
     }
 
+    /***
+     * 
+     * @param n число, заданное пользователем
+     * @return строку с n-ым треугольным числом и n!
+     */
     static String calculateProductSum(int n) {
         int prodact = 1;
         int sum = 0; 

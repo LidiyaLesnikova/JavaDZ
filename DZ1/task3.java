@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class task3 {
     public static void main(String[] args) {
-        //Реализовать простой калькулятор
+        //Реализовать "простой" калькулятор
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the expression to be calculated '+-*/()': ");
         String expression = scanner.nextLine();
@@ -28,8 +28,8 @@ public class task3 {
             str = str.replace(substr, rez).replace("(","").replace(")","");
         }
 
-        long counte = str.chars().filter(ch -> ch == '/' || ch == '*' || ch == '+' || ch == '-').count();
-        while (counte>=2) {
+        long counte;
+        do {
             counte = str.chars().filter(ch -> ch == '/' || ch == '*' || ch == '+' || ch == '-').count();
             if (counte>1) {
                 char[] operations = str.toCharArray();
@@ -39,10 +39,21 @@ public class task3 {
                         indexAll.add(i);
                     }
                 }
+
+                Boolean priznak = true;
+                for (int k = 0; k < indexAll.size()-1 & priznak; k++) {
+                    if (indexAll.get(k+1)-indexAll.get(k)==1){
+                        str = "Неверный ввод выражения";
+                        priznak = false;
+                    }
+                }
+                if (priznak == false) break;
+                
+
                 int index = -1;
                 for (int j = 0; j<operations.length & index==-1; j++) {
                     if (operations[j] == '/' || operations[j] == '*'){
-                        index = j; //indexAll.add(i);
+                        index = j; 
                     }
                 }
                 
@@ -63,7 +74,7 @@ public class task3 {
             } else {
                 str = getExpression(str.split(""));
             }
-        }
+        } while (counte>=2);
         return str;
     }
 

@@ -19,6 +19,12 @@ public class task3 {
         scanner.close();
     }
 
+    /***
+     * функция разбивает входящее выражение пользователя на подвыражения, которые передаются на вычисление 
+     * в порядке правил математики.
+     * @param str входящее выражение, введенное пользователем, которое надо вычислить
+     * @return готовое решение выражения
+     */
     public static String calculator(String str) {
         String substr = "";
         String rez = "";
@@ -78,6 +84,12 @@ public class task3 {
         return str;
     }
 
+    /***
+     * функция разбивает входящий массив на три элемента: число1-оператор-число2, чтобы потом передать
+     * из для непосредственного вычисления 
+     * @param elements массив из строки с вычисляемой частью (число-оператор-число) из исходного выражения 
+     * @return строка с результатом вычисления
+     */
     public static String getExpression(String[] elements) {
         Double number1 = 0.0;
         Double number2 = 0.0;
@@ -99,6 +111,14 @@ public class task3 {
         return actions(operator, number1, number2).toString();
     }
 
+    /***
+     * функция, которая непосредственно производит вычислительные действия с двумя числами,
+     * указанным оператором
+     * @param operator оператор вычисления
+     * @param num1 первое число
+     * @param num2 второе число
+     * @return число результат
+     */
     public static Double actions(String operator, Double num1, Double num2) {
         Double rezult = 0.0;
         switch (operator) {

@@ -1,6 +1,10 @@
+package org.example.DZ2.task1;
+
 import java.util.Scanner;
 
-public class task_1 {
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+public class Main {
     public static void main(String[] args) {
         // Given an input string s, reverse the order of the words
 
@@ -12,14 +16,14 @@ public class task_1 {
     }
 
     /**
-     * 
+     *
      * @param str введенная пользователем строка
-     * @return перевернутаястрока, 
+     * @return перевернутаястрока,
      */
     public static String reservString(String str) {
         String[] rez = str.trim().split(" ");
         String[] copy = new String[rez.length];
-        int count = 0; 
+        int count = 0;
         for (int i = rez.length-1; i >= 0; i--) {
             copy[count] = rez[i];
             count++;

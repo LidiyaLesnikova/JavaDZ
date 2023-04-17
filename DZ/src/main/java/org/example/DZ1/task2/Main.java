@@ -1,4 +1,4 @@
-package org.example.DZ2.task2;
+package org.example.DZ1.task2;
 
 import java.util.Scanner;
 

@@ -1,8 +1,6 @@
 package org.example.DZ2.task3;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 // Дан массив целых чисел. Заменить отрицательные элементы на сумму индексов двузначных элементов массива
 

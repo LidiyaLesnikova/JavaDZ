@@ -19,7 +19,7 @@ public class Main {
             if (arr[i]>9 && arr[i]<100) {
                 sum+=i;
             }
-            if (arr[i]<0) {
+            else if (arr[i]<0) {
                 list = list.replace(String.valueOf(arr[i]),"XX");
             }
         }

@@ -2,7 +2,6 @@ package org.example.DZ3.task4;
 //Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {

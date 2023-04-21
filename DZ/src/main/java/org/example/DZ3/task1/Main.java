@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         List<Product> productList = getProduct();
 
-        //var maxPrice;
         try {
             Product maxPrice = productList.stream().filter(pr -> (pr.nameProduct.contains("высший")) &&
                     (pr.variety == 1 || pr.variety == 2)).max(Comparator.comparingDouble(Product::getPrice)).get();
@@ -27,6 +26,7 @@ public class Main {
         productList.add(new Product("Товар 3 высший", 30.0, 2));
         productList.add(new Product("Товар 4", 20.0, 2));
         productList.add(new Product("Товар 5 высший", 10.0, 3));
+        productList.add(new Product("Товар 6 высший", 60.5, 1));
 
         return  productList;
     }

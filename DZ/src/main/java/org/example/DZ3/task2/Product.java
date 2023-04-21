@@ -1,15 +1,20 @@
-package org.example.DZ3.task1;
+package org.example.DZ3.task2;
 
 public class Product {
     String nameProduct;
-    Double price;
+    String country;
+    Float weight;
+    Float price;
     Integer variety;
 
-    public Product(String nameProduct, Double price, Integer variety) {
+    public Product(String nameProduct, String country, Float weight, Float price, Integer variety) {
         this.nameProduct = nameProduct;
+        this.country = country;
+        this.weight = weight;
         this.price = price;
         this.variety = variety;
     }
+
 
     public Double getPrice() {
         return price;

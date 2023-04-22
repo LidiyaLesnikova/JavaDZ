@@ -15,6 +15,7 @@ public class Main {
 
     static String returnArray(int[] array) {
         int count = factorial(array.length);
+        int q = count/array.length;
         System.out.println(count+" комбинаций: ");
         String[] arraysList = new String[count];
 
@@ -33,8 +34,8 @@ public class Main {
             } else {
                 index = 0;
                 temp = array[index];
-                array[index] = array[index+i/6];
-                array[index+i/6] = temp;
+                array[index] = array[index+i/q];
+                array[index+i/q] = temp;
             }
         } while (i<count);
         Arrays.sort(arraysList);

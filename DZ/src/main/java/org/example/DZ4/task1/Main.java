@@ -1,8 +1,6 @@
 package org.example.DZ4.task1;
 
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 //Вывести список на экран в перевернутом виде (без массивов и ArrayList)

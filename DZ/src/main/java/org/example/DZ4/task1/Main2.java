@@ -1,37 +1,36 @@
 package org.example.DZ4.task1;
 
-import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
 
 //Вывести список на экран в перевернутом виде (без массивов и ArrayList)
 //Пример:
 //1 -> 2->3->4
 //Вывод:
 //4->3->2->1
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите длину списка: ");
         int n = sc.nextInt();
-        LinkedList<Integer> list = getList(n);
+        Stack<Integer> list = getList(n);
         System.out.println(list);
         System.out.println(reservList(list));
     }
 
-    static LinkedList<Integer> getList(int n) {
-        LinkedList<Integer> list = new LinkedList<Integer>();
+    static Stack<Integer> getList(Integer n) {
+        Stack<Integer> list = new Stack<>();
         for (int i = 1; i < n; i++) {
             list.add(i);
         }
         return list;
     }
 
-    static LinkedList<Integer> reservList(LinkedList<Integer> list) {
-        int a = 0;
-        for (int i = 0; i < list.size(); i++) {
-            a = list.pollLast();
-            list.add(i, a);
+    static String reservList(Stack<Integer> list) {
+        String rez = "";
+        for (int i = list.size()-1; i >= 0; i--) {
+            rez += list.pop() + ", ";
         }
-        return list;
+        return rez.substring(0,rez.length()-2);
     }
 }

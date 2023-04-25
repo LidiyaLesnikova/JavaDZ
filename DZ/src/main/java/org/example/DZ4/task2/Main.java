@@ -2,7 +2,6 @@ package org.example.DZ4.task2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Deque;
 import java.util.List;
 
 //Дана строку, s содержащая только символы '(', ')', '{', '}''[', ']', определите, является ли введенная строка корректной.

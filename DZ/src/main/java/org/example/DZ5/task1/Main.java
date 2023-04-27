@@ -20,6 +20,11 @@ public class Main {
         countWord(textList, "Россия");
     }
 
+    /****
+     * возвращает количество вхождений искомого слова в тексте.
+     * @param text - текст, в котором ищется и считается заданное слово
+     * @param strRequest - заданное искомое слово
+     */
     static void countWord(List<String> text, String strRequest) {
         Map<String, Integer> mp = new HashMap<>();
         for (int i = 0; i < text.size(); i++) {

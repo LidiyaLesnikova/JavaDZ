@@ -30,6 +30,10 @@ public class Main {
         countDoubleName(wokers);
     }
 
+    /***
+     * выводит имена работников с количеством их повторений в списке работников по популярности
+     * @param wokers полученный ранее список работников
+     */
     static void countDoubleName(ArrayList<String> wokers) {
         Map<String, Integer> mp = new HashMap<>();
         String name = "";
@@ -53,6 +57,10 @@ public class Main {
         }
     }
 
+    /***
+     *
+     * @return возвращает список работников
+     */
     static ArrayList<String> getListWokers() {
         ArrayList<String> wokers = new ArrayList<>();
         wokers.add("Иван Иванов");

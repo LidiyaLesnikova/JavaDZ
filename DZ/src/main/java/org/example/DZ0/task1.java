@@ -1,6 +1,8 @@
+package org.example.DZ0;
+
 import java.util.Scanner;
 
-public class task_1 {
+public class task1 {
     public static void main(String[] args) {
         //Вычислить n-ое треугольного число (сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
         Scanner scanner = new Scanner(System.in);

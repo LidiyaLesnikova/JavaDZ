@@ -1,3 +1,5 @@
+package org.example.DZ0;
+
 public class task4 {
     public static void main(String[] args) {
         /* +Задано уравнение вида q + w = e, q, w, e >= 0. Некоторые цифры могут быть заменены знаком 

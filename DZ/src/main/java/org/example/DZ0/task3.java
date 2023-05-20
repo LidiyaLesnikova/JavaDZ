@@ -1,3 +1,5 @@
+package org.example.DZ0;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 

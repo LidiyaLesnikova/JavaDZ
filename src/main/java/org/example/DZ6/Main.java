@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         List<Notebook> notebookList = getNotebooks();
         Map<Integer, Object> filter = selectUser(notebookList);
-        System.out.println((filter.isEmpty()) ? "Фильтр пользотелем не задан":filterNotebook(notebookList,filter));
+        System.out.println((filter.isEmpty()) ? "Фильтр пользотелем не задан. Полный список:"+notebookList:filterNotebook(notebookList,filter));
     }
 
     /**
@@ -28,7 +28,7 @@ public class Main {
      * @return список ноутбуков
      */
     public static List<Notebook> getNotebooks() {
-            ArrayList<Notebook> notebookList = new ArrayList<Notebook>();
+            ArrayList<Notebook> notebookList = new ArrayList<>();
             notebookList.add(new Notebook("Lenovo","SSD",512, 8, "Windows 10", "grey", "China", 20000.00));
             notebookList.add(new Notebook("Lenovo","HD",218, 4, "Windows 8", "black", "China", 15000.00));
             notebookList.add(new Notebook("iRU","HD",1000, 8, "Windows 10", "grey", "Russia", 30000.00));
@@ -55,13 +55,13 @@ public class Main {
                 System.out.printf("%d - %s\n",i+1,fields[i].getName());
             }
             System.out.println(
-                    "9 - вывод всего списка без отбора\n" +
-                    "0 - ВЫХОД\n" +
-                    "Введите цифру, соответствующую необходимому критерию отбора: ");
+                    "---------\n" +
+                    "0 - EXIT\n" +
+                    "Введите номер, соответствующий необходимому критерию отбора: ");
             n = scan.nextInt();
             scan.nextLine();
-            if (n>=1 && n<=8) {
-                Set<Object> list = new HashSet<Object>();
+            if (n>=1 && n<=fields.length) {
+                Set<Object> list = new HashSet<>();
                 for (Notebook notebook : notebookList) {
                     list.add(notebook.getField(n));
                 }
@@ -87,11 +87,8 @@ public class Main {
                     filter.put(n, price);
                 }
             }
-            else if (n==9) {
-                System.out.println(notebookList);
-            }
             else {
-                if (n!=0) System.out.println("Неверно выбранная цифра, попробуйте еще раз");
+                if (n!=0) System.out.println("Неверно введенный номер, попробуйте еще раз");
             }
         } while (n!=0);
         scan.close();
